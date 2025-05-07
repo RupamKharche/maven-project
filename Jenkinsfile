@@ -14,7 +14,7 @@ pipelin
     {
       steps
       {
-        withMaven(globalMavenSettingsConfig: '', jdk: '/usr/lib/jvm/java-17-amazon-corretto.x86_64/bin/java', maven: '/usr/share/apache-maven/bin/mvn', mavenSettingsConfig: '', traceability: true)
+        withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true)
          {
             sh 'mvn compile'
           }
