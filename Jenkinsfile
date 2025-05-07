@@ -1,32 +1,26 @@
-pipeline {
+pipelin
+{
   agent any
-  stages {
-    stage('scm checkout') {
-      steps {
-        git branch: 'master', url: 'https://github.com/kumargaurav039/maven-project.git'
+  stages
+  {
+    stage('SCM Chekout')
+    {
+      steps
+      {
+        git branch: 'master', url: 'https://github.com/RupamKharche/maven-project.git'
       }
     }
-
-    stage('package job') //valiadte, compile, test & then package
+    stage ('Compile')
     {
-      steps {
-          withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
-          
-          withSonarQubeEnv(credentialsId: 'sonarconnection', installationName: 'sonar' ) {
-             sh 'mvn package sonar:sonar'}
-                }
-          
-          
-          
+      steps
+      {
+        withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true)
+         {
+            sh 'mvn compile'
           }
-        }
-
-
       }
-
-    
-
-      }
-
+    }
+  }
+}
 
     
