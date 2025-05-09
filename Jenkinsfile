@@ -1,4 +1,4 @@
-pipelin
+pipeline
 {
   agent any
   stages
@@ -14,7 +14,8 @@ pipelin
     {
       steps
       {
-        withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true)
+        withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true) 
+        
          {
             sh 'mvn compile'
           }
@@ -22,5 +23,6 @@ pipelin
     }
   }
 }
+
 
     
