@@ -27,7 +27,8 @@ pipeline
     {
       sshagent(['DevCICD'])
        {
-          sh 'scp /VS/webapp/target/webapp.war ec2-user@172.31.3.119:/usr/share/tomcat/webapps'
+          sh 'scp webapp/target/webapp.war ec2-user@172.31.3.119:/usr/share/tomcat/webapps'
+
        }
    }
   }
