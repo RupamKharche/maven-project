@@ -21,6 +21,14 @@ pipeline
            }
      }
    }
+   stage ('depolyment')
+   {
+    steps
+    {
+      sshagent(['DevCICD']) {
+       sh 'scp -o /webapp/target/webapp.war ec2-user@172.31.3.119:/usr/share/tomcat/webapps'
+    }
+   }
   }
 }
 
