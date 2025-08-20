@@ -21,18 +21,18 @@ pipeline
            }
      }
    }
-   stage ('depolyment')
+  /* stage ('depolyment')
    {
     steps
     {
       sshagent(['DevCICD'])
        {
-          sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@13.232.185.79:/usr/share/tomcat/webapps'
+          sh 'tHostKeyChecking=nscp -o Strico webapp/target/webapp.war ec2-user@13.232.185.79:/usr/share/tomcat/webapps'
 
 
        }
    }
-  }
+  }*/
 }
 }
 
