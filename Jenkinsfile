@@ -17,11 +17,11 @@ pipeline
         withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) 
         
           {
-             sh 'mvn package'
-           }
+                    sh 'mvn package'
+          }
+       }
      }
-   }
-  /* stage ('depolyment')
+   stage ('depolyment')
    {
     steps
     {
@@ -31,9 +31,9 @@ pipeline
 
 
        }
-   }
-  }*/
-}
+    }
+  }
+  }
 }
 
     
