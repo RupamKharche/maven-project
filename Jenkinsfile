@@ -18,6 +18,7 @@ pipeline
         
           {
                     sh 'mvn package'
+                    echo mv package
           }
        }
      }
@@ -34,6 +35,4 @@ pipeline
     }
    }
   }
-}
-
-    
+}   
