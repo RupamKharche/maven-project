@@ -7,7 +7,7 @@ pipeline
     {
       steps
       {
-        git branch: 'master', url: 'https://github.com/RupamKharche/maven-project.git'
+         git branch: 'master', url: 'https://github.com/RupamKharche/maven-project.git'
       }
     }
     stage ('package')
